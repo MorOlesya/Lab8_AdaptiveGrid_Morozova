@@ -1,0 +1,30 @@
+.grid-container {
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: 100px auto auto auto auto 100px; */
+    gap: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+        justify-items: center;
+        align-items: center;
+}
+
+.header{
+    grid-area: header;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
