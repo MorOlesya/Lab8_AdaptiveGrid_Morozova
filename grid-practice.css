@@ -1,38 +1,62 @@
 .header {
-    display: grid;
-    height: 80px;
-    grid-area: header;
-    background-color: #555;
-    color: white;
+  display: flex;
+  grid-area: header;
+  background-color: #555;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-color: #555;
+}
+
+.main {
+  display: flex;
+  grid-area: main;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid #adadad;
 }
 
 .footer {
-    height: 60px;
-    grid-area: footer;
+  display: flex;
+  grid-area: footer;
+  background-color: #555;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .sidebar {
-    height: 200px;
-    grid-area: sidebar;
+  display: flex;
+  grid-area: sidebar;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid #adadad;
 }
 
-* {
-    gap: 15px;
-    display: grid;
-    grid-template-areas: 
+.main-container {
+  gap: 15px;
+  display: grid;
+  grid-template-areas:
     "header header header"
     "sidebar main widget"
     "sidebar main widget"
     "footer footer footer";
-}
-
-.widget-container {
-    display: flex;
-    flex-direction: column;
+  min-height: 600px;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 80px 200px 200px 60px;
 }
 
 .widget {
-    height: 200px;
-    width: 300px;
-    grid-area: widget;
+  display: flex;
+  height: 200px;
+  width: 300px;
+  grid-area: widget;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid #adadad;
 }
