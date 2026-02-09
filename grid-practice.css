@@ -1,0 +1,38 @@
+.header {
+    display: grid;
+    height: 80px;
+    grid-area: header;
+    background-color: #555;
+    color: white;
+}
+
+.footer {
+    height: 60px;
+    grid-area: footer;
+}
+
+.sidebar {
+    height: 200px;
+    grid-area: sidebar;
+}
+
+* {
+    gap: 15px;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main widget"
+    "sidebar main widget"
+    "footer footer footer";
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget {
+    height: 200px;
+    width: 300px;
+    grid-area: widget;
+}
